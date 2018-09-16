@@ -1,9 +1,13 @@
 package com.epro1webservice.model;
 
+import java.io.Serializable;
 import java.time.ZonedDateTime;
 
-public class AsignaturaModel {
+public class AsignaturaModel implements Serializable{
 
+	
+	private static final long serialVersionUID = 1L;
+	
 	int id;
 	private String facultad;
 	private String escuela;

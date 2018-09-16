@@ -1,18 +1,21 @@
 package com.epro1webservice.model;
 
+import java.io.Serializable;
+import java.sql.Timestamp;
 import java.time.ZonedDateTime;
 
-public class UserAlumnoModel {
-
+public class UserAlumnoModel implements Serializable{
+	
+	private static final long serialVersionUID = 1L;
 	
 	private String carne;
 	private String password;
 	private String nombre;
 	private String apellido;
 	private String creadoPor;
-	private ZonedDateTime creadoFecha;
+	private Timestamp creadoFecha;
 	private String actualizadoPor;
-	private ZonedDateTime actualizadoFecha;
+	private Timestamp actualizadoFecha;
 	public String getCarne() {
 		return carne;
 	}
@@ -43,10 +46,10 @@ public class UserAlumnoModel {
 	public void setCreadoPor(String creadoPor) {
 		this.creadoPor = creadoPor;
 	}
-	public ZonedDateTime getCreadoFecha() {
+	public Timestamp getCreadoFecha() {
 		return creadoFecha;
 	}
-	public void setCreadoFecha(ZonedDateTime creadoFecha) {
+	public void setCreadoFecha(Timestamp creadoFecha) {
 		this.creadoFecha = creadoFecha;
 	}
 	public String getActualizadoPor() {
@@ -55,10 +58,10 @@ public class UserAlumnoModel {
 	public void setActualizadoPor(String actualizadoPor) {
 		this.actualizadoPor = actualizadoPor;
 	}
-	public ZonedDateTime getActualizadoFecha() {
+	public Timestamp getActualizadoFecha() {
 		return actualizadoFecha;
 	}
-	public void setActualizadoFecha(ZonedDateTime actualizadoFecha) {
+	public void setActualizadoFecha(Timestamp actualizadoFecha) {
 		this.actualizadoFecha = actualizadoFecha;
 	}
 	

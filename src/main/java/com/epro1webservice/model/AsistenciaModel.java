@@ -1,8 +1,12 @@
 package com.epro1webservice.model;
 
+import java.io.Serializable;
 import java.time.ZonedDateTime;
 
-public class AsistenciaModel {
+public class AsistenciaModel implements Serializable{
+	
+	
+	private static final long serialVersionUID = 1L;
 	
 	private int id;
 	private String carne;

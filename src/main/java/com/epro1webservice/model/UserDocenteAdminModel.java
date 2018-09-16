@@ -1,9 +1,15 @@
 package com.epro1webservice.model;
 
+import java.io.Serializable;
+import java.sql.Timestamp;
 import java.time.ZonedDateTime;
 
-public class UserDocenteAdminModel {
+public class UserDocenteAdminModel implements Serializable{
 
+	
+	private static final long serialVersionUID = 1L;
+	
+	
 	private int id;
 	private String email;
 	private String password;
@@ -11,9 +17,9 @@ public class UserDocenteAdminModel {
 	private String apellido;
 	private int rol;
 	private String creadoPor;
-	private ZonedDateTime creadoFecha;
+	private Timestamp creadoFecha;
 	private String actualizadoPor;
-	private ZonedDateTime actualizadoFecha;
+	private Timestamp actualizadoFecha;
 	public int getId() {
 		return id;
 	}
@@ -56,10 +62,10 @@ public class UserDocenteAdminModel {
 	public void setCreadoPor(String creadoPor) {
 		this.creadoPor = creadoPor;
 	}
-	public ZonedDateTime getCreadoFecha() {
+	public Timestamp getCreadoFecha() {
 		return creadoFecha;
 	}
-	public void setCreadoFecha(ZonedDateTime creadoFecha) {
+	public void setCreadoFecha(Timestamp creadoFecha) {
 		this.creadoFecha = creadoFecha;
 	}
 	public String getActualizadoPor() {
@@ -68,10 +74,10 @@ public class UserDocenteAdminModel {
 	public void setActualizadoPor(String actualizadoPor) {
 		this.actualizadoPor = actualizadoPor;
 	}
-	public ZonedDateTime getActualizadoFecha() {
+	public Timestamp getActualizadoFecha() {
 		return actualizadoFecha;
 	}
-	public void setActualizadoFecha(ZonedDateTime actualizadoFecha) {
+	public void setActualizadoFecha(Timestamp actualizadoFecha) {
 		this.actualizadoFecha = actualizadoFecha;
 	}
 	

@@ -5,21 +5,22 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
+
+import com.epro1webservice.entity.AlumnoEntity;
+
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.MediaType;
 import org.springframework.http.ResponseEntity;
 
 import org.springframework.web.bind.annotation.PathVariable;
-import com.epro1webservice.service.IUserAlumnoService;
-
-import com.epro1webservice.model.UserAlumnoModel;
+import org.springframework.web.bind.annotation.PostMapping;
 
 @RestController
 @RequestMapping("/alumno")
 public class UserAlumnoController {
 
-	@Autowired
+	/*@Autowired
 	@Qualifier("userAlumnoServiceImpl")
 	private IUserAlumnoService userAlumnoService;
 	
@@ -32,5 +33,14 @@ public class UserAlumnoController {
 		return new ResponseEntity<UserAlumnoModel>(userAlumno, HttpStatus.OK);
 		
 	}
+	
+	@GetMapping(value = "/{carne}/{password}", produces = { MediaType.APPLICATION_JSON_VALUE })
+	public ResponseEntity<UserAlumnoModel> getAluByCarAndPw(@PathVariable("carne") String carne, @PathVariable("password") String password) {
+		
+		UserAlumnoModel userAlumno = userAlumnoService.getAluByCarAndPw(carne, password);
+		
+		return new ResponseEntity<UserAlumnoModel>(userAlumno, HttpStatus.OK);
+		
+	}*/
 	
 }

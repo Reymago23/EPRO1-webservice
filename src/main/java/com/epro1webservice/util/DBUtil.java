@@ -43,11 +43,11 @@ public class DBUtil {
 	/**
 	 * Asistencia Constants
 	 */
-	static final String ASISTENCIA_TABLE = "asistencia_tbl";
-	static final String ASISTENCIA_ID = "id";
-	static final String ASISTENCIA_ALUMNO_CARNE = "alumno_carne";
-	static final String ASISTENCIA_ASIGNATURA_ID = "asignatura_id";
-	static final String ASISTENCIA_FECHA_HORA_ASISTENCIA = "fecha_hora_asistencia";
+	public static final String ASISTENCIA_TABLE = "asistencia_tbl";
+	public static final String ASISTENCIA_ID = "id";
+	public static final String ASISTENCIA_ALUMNO_CARNE = "alumno_carne";
+	public static final String ASISTENCIA_ASIGNATURA_ID = "asignatura_id";
+	public static final String ASISTENCIA_FECHA_HORA_ASISTENCIA = "fecha_hora_asistencia";
 	
 	
 	

@@ -1,10 +1,10 @@
-package com.epro1webservice.model;
+package com.epro1webservice.entity;
 
 import java.io.Serializable;
 import java.sql.Timestamp;
 import java.time.ZonedDateTime;
 
-public class UserAlumnoModel implements Serializable{
+public class AlumnoEntity implements Serializable{
 	
 	private static final long serialVersionUID = 1L;
 	

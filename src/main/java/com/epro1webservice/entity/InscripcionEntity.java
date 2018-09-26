@@ -1,9 +1,9 @@
-package com.epro1webservice.model;
+package com.epro1webservice.entity;
 
 import java.io.Serializable;
 import java.time.ZonedDateTime;
 
-public class InscripcionModel implements Serializable{
+public class InscripcionEntity implements Serializable{
 
 	
 	

@@ -5,13 +5,13 @@ import static org.junit.Assert.*;
 import org.junit.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 
-import com.epro1webservice.dao.IUserAlumnoDao;
-import com.epro1webservice.model.UserAlumnoModel;
+import com.epro1webservice.entity.AlumnoEntity;
+import com.epro1webservice.repository.IAlumnoRepository;
 
 public class UserAlumnoDaoImplTest {
 
 	@Autowired
-	private IUserAlumnoDao userAlumnoDao;
+	private IAlumnoRepository userAlumnoDao;
 	
 	@Test
 	public void test() {

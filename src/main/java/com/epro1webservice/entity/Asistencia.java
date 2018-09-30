@@ -2,6 +2,8 @@ package com.epro1webservice.entity;
 
 import java.io.Serializable;
 import java.sql.Timestamp;
+import java.time.LocalDate;
+import java.time.LocalTime;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
@@ -34,9 +36,11 @@ public class Asistencia implements Serializable{
 	@Column(name="aula")
 	private String aula;
 	
-	@Column(name="fecha_hora")
-	private Timestamp fechaHora;
+	@Column(name="fecha")
+	private LocalDate fecha;
 	
+	@Column(name="hora")
+	private LocalTime hora;
 	
 	public long getId() {
 		return id;
@@ -69,11 +73,19 @@ public class Asistencia implements Serializable{
 	public void setAula(String aula) {
 		this.aula = aula;
 	}
-	public void setFechaHora(Timestamp fechaHora) {
-		this.fechaHora = fechaHora;
+
+	public LocalDate getFecha() {
+		return fecha;
 	}
-	public Timestamp getFechaHora() {
-		return fechaHora;
+	public void setFecha(LocalDate fecha) {
+		this.fecha = fecha;
+	}
+	public LocalTime getHora() {
+		return hora;
+	}
+	public void setHora(LocalTime hora) {
+		this.hora = hora;
 	}
 
+	
 }

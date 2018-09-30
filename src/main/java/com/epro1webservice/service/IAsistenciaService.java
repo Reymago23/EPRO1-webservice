@@ -2,12 +2,12 @@ package com.epro1webservice.service;
 
 import java.util.List;
 
-import com.epro1webservice.entity.AsistenciaEntity;
+import com.epro1webservice.entity.Asistencia;
 
 public interface IAsistenciaService {
 
 	
-	public abstract boolean addAsistencia(AsistenciaEntity asistencia);
-	public abstract List<AsistenciaEntity> getAllAsistencias();
-	public abstract List<AsistenciaEntity> getAsistenciasByCarne(String carne);
+	public abstract Asistencia addAsistencia(Asistencia asistencia);
+	public abstract List<Asistencia> getAllAsistencias();
+	public abstract List<Asistencia> getAsistenciasByCarne(String carne);
 }

@@ -5,7 +5,7 @@ import java.util.List;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import com.epro1webservice.entity.AsistenciaEntity;
+import com.epro1webservice.entity.Asistencia;
 import com.epro1webservice.repository.IAsistenciaRepository;
 import com.epro1webservice.service.IAsistenciaService;
 
@@ -18,27 +18,22 @@ public class AsistenciaService implements IAsistenciaService {
 	
 	
 	@Override
-	public boolean addAsistencia(AsistenciaEntity asistencia) {
+	public Asistencia addAsistencia(Asistencia asistencia) {
 		
 		
-		if (asitenciaRepository.save(asistencia) != null) {
-			
-			return true;
-		}
-		
-		return false;
+		return asitenciaRepository.save(asistencia);
 	}
 
 	@Override
-	public List<AsistenciaEntity> getAllAsistencias() {
+	public List<Asistencia> getAllAsistencias() {
 		
 		return asitenciaRepository.findAll();
 	}
 
 	@Override
-	public List<AsistenciaEntity> getAsistenciasByCarne(String carne) {
-		// TODO Auto-generated method stub
-		return null;
+	public List<Asistencia> getAsistenciasByCarne(String carne) {
+		
+		return asitenciaRepository.getAsistenciasByCarne(carne);
 	}
 
 }

@@ -1,14 +1,13 @@
 package com.epro1webservice.repository;
 
-import java.util.List;
+
+import org.springframework.data.jpa.repository.JpaRepository;
 
 import com.epro1webservice.entity.Alumno;
 
-public interface IAlumnoRepository {
+public interface IAlumnoRepository extends JpaRepository<Alumno, Long> {
 
 	public abstract Alumno getUserAlumnoByCarne(String carne);
-	public abstract Alumno getAluByCarAndPw(String carne, String password);
-	public abstract int insertUserAlumno(Alumno userAlumno);
-	public abstract List<Alumno> getAllUsersAlumno();
-	public abstract List<Alumno> getAlumnosByAsignaturaId(int asignaturaId);
+	public abstract Alumno getAlumnoByCarneAndPassword(String carne, String password);
+
 }

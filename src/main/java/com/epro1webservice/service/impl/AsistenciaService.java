@@ -10,7 +10,7 @@ import com.epro1webservice.repository.IAsistenciaRepository;
 import com.epro1webservice.service.IAsistenciaService;
 
 
-@Service
+@Service("asistenciaService")
 public class AsistenciaService implements IAsistenciaService {
 
 	@Autowired

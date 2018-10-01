@@ -15,7 +15,7 @@ import com.epro1webservice.entity.Docente;
 
 @RestController
 @RequestMapping("/docente")
-public class UserDocenteAdminController {
+public class DocenteController {
 
 	
 	//@Autowired

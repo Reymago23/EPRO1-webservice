@@ -19,6 +19,12 @@ public class Asistencia implements Serializable{
 	
 	private static final long serialVersionUID = 1L;
 	
+	
+	
+	public Asistencia() {
+		super();
+	}
+	
 	@Id
 	@GeneratedValue(strategy=GenerationType.AUTO)
 	@Column(name= "id")

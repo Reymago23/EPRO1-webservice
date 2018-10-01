@@ -1,6 +1,7 @@
 package com.epro1webservice.controller;
 
 
+import java.sql.Timestamp;
 import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -26,17 +27,11 @@ public class AsistenciaController {
 	private IAsistenciaService asistenciaService;
 	
 	@PostMapping(produces= { MediaType.APPLICATION_JSON_VALUE })
-	public ResponseEntity<Asistencia> addAsistencia(@RequestBody Asistencia asistenciaEntity) {
+	public ResponseEntity<Asistencia> addAsistencia(@RequestBody Asistencia a) {
 		
-        
-		Asistencia asistencia = asistenciaService.addAsistencia(asistenciaEntity);
-                
-        if (asistencia == null) {
-                	
-              return new ResponseEntity<Asistencia>(asistencia, HttpStatus.CONFLICT);
-          }
-        
-       return new ResponseEntity<Asistencia>(asistencia, HttpStatus.CREATED);
+		Asistencia asistencia = new Asistencia(a.getCarne(), a.getAsignatura(),	a.getSeccion(), a.getAula(), new Timestamp(System.currentTimeMillis()));
+		
+       return new ResponseEntity<Asistencia>(asistenciaService.addAsistencia(asistencia), HttpStatus.CREATED);
 	}
 	
 	

@@ -2,14 +2,14 @@ package com.epro1webservice.repository;
 
 import java.util.List;
 
-import com.epro1webservice.entity.DocenteEntity;
+import com.epro1webservice.entity.Docente;
 
 public interface IDocenteRepository {
 
 	
-	public abstract int insertUserDocenteAdmin(DocenteEntity userDocenteAdmin);
-	public abstract DocenteEntity getUserDocenteAdminById(int id);
-	public abstract DocenteEntity getUserDocenteByEmailAndPassword(String email, String password);
-	public abstract List<DocenteEntity> getAllUserDocenteAdmin();
+	public abstract int insertUserDocenteAdmin(Docente userDocenteAdmin);
+	public abstract Docente getUserDocenteAdminById(int id);
+	public abstract Docente getUserDocenteByEmailAndPassword(String email, String password);
+	public abstract List<Docente> getAllUserDocenteAdmin();
 	
 }

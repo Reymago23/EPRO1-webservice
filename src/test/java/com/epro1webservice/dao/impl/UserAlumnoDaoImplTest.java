@@ -5,7 +5,7 @@ import static org.junit.Assert.*;
 import org.junit.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 
-import com.epro1webservice.entity.AlumnoEntity;
+import com.epro1webservice.entity.Alumno;
 import com.epro1webservice.repository.IAlumnoRepository;
 
 public class UserAlumnoDaoImplTest {

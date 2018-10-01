@@ -4,18 +4,56 @@ import java.io.Serializable;
 import java.sql.Timestamp;
 import java.time.ZonedDateTime;
 
-public class AlumnoEntity implements Serializable{
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
+import javax.persistence.Table;
+
+
+@Entity
+@Table(name ="alumno")
+public class Alumno implements Serializable{
 	
 	private static final long serialVersionUID = 1L;
 	
+	@Id
+	@GeneratedValue(strategy=GenerationType.AUTO)
+	@Column(name= "id")
+	private long id;
+	
+	@Column(name="carne")
 	private String carne;
+	
+	@Column(name="password")
 	private String password;
+	
+	@Column(name="nombre")
 	private String nombre;
+	
+	@Column(name="apellido")
 	private String apellido;
+	
+	@Column(name="creado_por")
 	private String creadoPor;
+	
+	@Column(name="creado_fecha")
 	private Timestamp creadoFecha;
+	
+	@Column(name="actualizado_por")
 	private String actualizadoPor;
+	
+	@Column(name="actualizado_fecha")
 	private Timestamp actualizadoFecha;
+	
+	
+	public long getId() {
+		return id;
+	}
+	public void setId(long id) {
+		this.id = id;
+	}
 	public String getCarne() {
 		return carne;
 	}

@@ -4,22 +4,54 @@ import java.io.Serializable;
 import java.sql.Timestamp;
 import java.time.ZonedDateTime;
 
-public class DocenteEntity implements Serializable{
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
+import javax.persistence.Table;
+
+
+@Entity
+@Table(name ="docente")
+public class Docente implements Serializable{
 
 	
 	private static final long serialVersionUID = 1L;
 	
-	
+	@Id
+	@GeneratedValue(strategy=GenerationType.AUTO)
+	@Column(name= "id")
 	private int id;
+	
+	@Column(name= "email")
 	private String email;
+	
+	@Column(name= "password")
 	private String password;
+	
+	@Column(name= "nombre")
 	private String nombre;
+	
+	@Column(name= "apellido")
 	private String apellido;
+	
+	@Column(name= "rol")
 	private int rol;
+	
+	@Column(name="creado_por")
 	private String creadoPor;
+	
+	@Column(name="creado_fecha")
 	private Timestamp creadoFecha;
+	
+	@Column(name="actualizado_por")
 	private String actualizadoPor;
+	
+	@Column(name="actualizado_fecha")
 	private Timestamp actualizadoFecha;
+	
+	
 	public int getId() {
 		return id;
 	}
@@ -56,6 +88,8 @@ public class DocenteEntity implements Serializable{
 	public void setRol(int rol) {
 		this.rol = rol;
 	}
+	
+	
 	public String getCreadoPor() {
 		return creadoPor;
 	}

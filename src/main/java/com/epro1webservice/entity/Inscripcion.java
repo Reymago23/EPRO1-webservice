@@ -1,23 +1,56 @@
 package com.epro1webservice.entity;
 
 import java.io.Serializable;
-import java.time.ZonedDateTime;
+import java.sql.Timestamp;
 
-public class InscripcionEntity implements Serializable{
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
+import javax.persistence.Table;
+
+
+@Entity
+@Table(name ="inscripcion")
+public class Inscripcion implements Serializable{
 
 	
 	
 	private static final long serialVersionUID = 1L;
 	
+	
+	@Id
+	@GeneratedValue(strategy=GenerationType.AUTO)
+	@Column(name= "id")
 	private int id;
+	
+	@Column(name= "alumno_carne")
 	private String alumnoCarne;
+	
+	@Column(name= "id_asignatura")
 	private int idAsignatura;
+	
+	@Column(name= "ciclo")
 	private String ciclo;
+	
+	@Column(name= "activa")
 	private byte activa;
+	
+	
+	@Column(name="creado_por")
 	private String creadoPor;
-	private ZonedDateTime creadoFecha;
+	
+	@Column(name="creado_fecha")
+	private Timestamp creadoFecha;
+	
+	@Column(name="actualizado_por")
 	private String actualizadoPor;
-	private ZonedDateTime actualizadoFecha;
+	
+	@Column(name="actualizado_fecha")
+	private Timestamp actualizadoFecha;
+	
+	
 	public int getId() {
 		return id;
 	}
@@ -54,10 +87,10 @@ public class InscripcionEntity implements Serializable{
 	public void setCreadoPor(String creadoPor) {
 		this.creadoPor = creadoPor;
 	}
-	public ZonedDateTime getCreadoFecha() {
+	public Timestamp getCreadoFecha() {
 		return creadoFecha;
 	}
-	public void setCreadoFecha(ZonedDateTime creadoFecha) {
+	public void setCreadoFecha(Timestamp creadoFecha) {
 		this.creadoFecha = creadoFecha;
 	}
 	public String getActualizadoPor() {
@@ -66,12 +99,13 @@ public class InscripcionEntity implements Serializable{
 	public void setActualizadoPor(String actualizadoPor) {
 		this.actualizadoPor = actualizadoPor;
 	}
-	public ZonedDateTime getActualizadoFecha() {
+	public Timestamp getActualizadoFecha() {
 		return actualizadoFecha;
 	}
-	public void setActualizadoFecha(ZonedDateTime actualizadoFecha) {
+	public void setActualizadoFecha(Timestamp actualizadoFecha) {
 		this.actualizadoFecha = actualizadoFecha;
 	}
+	
 	
 	
 }

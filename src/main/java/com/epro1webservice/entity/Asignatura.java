@@ -1,30 +1,96 @@
 package com.epro1webservice.entity;
 
 import java.io.Serializable;
-import java.time.ZonedDateTime;
+import java.sql.Timestamp;
 
-public class AsignaturaEntity implements Serializable{
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
+import javax.persistence.Table;
+
+
+@Entity
+@Table(name ="asignatura")
+public class Asignatura implements Serializable{
 
 	
 	private static final long serialVersionUID = 1L;
 	
+	@Id
+	@GeneratedValue(strategy=GenerationType.AUTO)
+	@Column(name= "id")
 	int id;
+	
+	@Column(name= "facultad")
 	private String facultad;
+	
+	@Column(name= "escuela")
 	private String escuela;
+	
+	@Column(name= "codigo")
 	private String codigo;
+	
+	@Column(name= "nombre")
 	private String nombre;
-	private int idDocente;
+	
+	@Column(name= "docente")
+	private String docente;
+	
+	@Column(name= "seccion")
 	private String seccion;
+	
+	@Column(name= "dias")
 	private String dias;
+	
+	@Column(name= "hora")
 	private String hora;
-	private int alumnoInscritos;
+	
+	@Column(name= "inscritos")
+	private int inscritos;
+	
+	@Column(name= "aula")
 	private String aula;
+	
+	@Column(name= "creado_por")
 	private String creadoPor;
-	private ZonedDateTime creadoFecha;
+	
+	@Column(name= "creado_fecha")
+	private Timestamp creadoFecha;
+	
+	@Column(name= "actualizado_por")
 	private String actualizadoPor;
-	private ZonedDateTime actualizadoFecha;
+	
+	@Column(name= "actualizado_fecha")
+	private Timestamp actualizadoFecha;
 	
 	
+	
+	public String getDocente() {
+		return docente;
+	}
+	public void setDocente(String docente) {
+		this.docente = docente;
+	}
+	public int getInscritos() {
+		return inscritos;
+	}
+	public void setInscritos(int inscritos) {
+		this.inscritos = inscritos;
+	}
+	public Timestamp getCreadoFecha() {
+		return creadoFecha;
+	}
+	public void setCreadoFecha(Timestamp creadoFecha) {
+		this.creadoFecha = creadoFecha;
+	}
+	public Timestamp getActualizadoFecha() {
+		return actualizadoFecha;
+	}
+	public void setActualizadoFecha(Timestamp actualizadoFecha) {
+		this.actualizadoFecha = actualizadoFecha;
+	}
 	public int getId() {
 		return id;
 	}
@@ -55,12 +121,7 @@ public class AsignaturaEntity implements Serializable{
 	public void setNombre(String nombre) {
 		this.nombre = nombre;
 	}
-	public int getIdDocente() {
-		return idDocente;
-	}
-	public void setIdDocente(int idDocente) {
-		this.idDocente = idDocente;
-	}
+
 	public String getSeccion() {
 		return seccion;
 	}
@@ -79,12 +140,7 @@ public class AsignaturaEntity implements Serializable{
 	public void setHora(String hora) {
 		this.hora = hora;
 	}
-	public int getAlumnoInscritos() {
-		return alumnoInscritos;
-	}
-	public void setAlumnoInscritos(int alumnoInscritos) {
-		this.alumnoInscritos = alumnoInscritos;
-	}
+
 	public String getAula() {
 		return aula;
 	}
@@ -97,23 +153,12 @@ public class AsignaturaEntity implements Serializable{
 	public void setCreadoPor(String creadoPor) {
 		this.creadoPor = creadoPor;
 	}
-	public ZonedDateTime getCreadoFecha() {
-		return creadoFecha;
-	}
-	public void setCreadoFecha(ZonedDateTime creadoFecha) {
-		this.creadoFecha = creadoFecha;
-	}
+
 	public String getActualizadoPor() {
 		return actualizadoPor;
 	}
 	public void setActualizadoPor(String actualizadoPor) {
 		this.actualizadoPor = actualizadoPor;
-	}
-	public ZonedDateTime getActualizadoFecha() {
-		return actualizadoFecha;
-	}
-	public void setActualizadoFecha(ZonedDateTime actualizadoFecha) {
-		this.actualizadoFecha = actualizadoFecha;
 	}
 	
 }

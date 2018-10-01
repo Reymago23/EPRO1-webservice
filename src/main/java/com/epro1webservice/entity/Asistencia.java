@@ -13,7 +13,7 @@ import javax.persistence.Id;
 import javax.persistence.Table;
 
 @Entity
-@Table(name ="asistencia_tbl")
+@Table(name ="asistencia")
 public class Asistencia implements Serializable{
 	
 	
@@ -38,7 +38,18 @@ public class Asistencia implements Serializable{
 	
 	@Column(name="fecha_hora")
 	private Timestamp fechaHora;
+	
+	
 
+	
+	public Asistencia(String carne, String asignatura, String seccion, String aula, Timestamp fechaHora) {
+		super();
+		this.carne = carne;
+		this.asignatura = asignatura;
+		this.seccion = seccion;
+		this.aula = aula;
+		this.fechaHora = fechaHora;
+	}
 	
 	public long getId() {
 		return id;

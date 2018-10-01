@@ -37,7 +37,7 @@ public class Asistencia implements Serializable{
 	private String aula;
 	
 	@Column(name="fecha_hora")
-	private LocalDate fechaHora;
+	private Timestamp fechaHora;
 
 	
 	public long getId() {
@@ -71,10 +71,10 @@ public class Asistencia implements Serializable{
 	public void setAula(String aula) {
 		this.aula = aula;
 	}
-	public LocalDate getFechaHora() {
+	public Timestamp getFechaHora() {
 		return fechaHora;
 	}
-	public void setFechaHora(LocalDate fechaHora) {
+	public void setFechaHora(Timestamp fechaHora) {
 		this.fechaHora = fechaHora;
 	}
 	

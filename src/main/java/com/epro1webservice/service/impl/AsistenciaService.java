@@ -33,7 +33,7 @@ public class AsistenciaService implements IAsistenciaService {
 	@Override
 	public List<Asistencia> getAsistenciasByCarne(String carne) {
 		
-		return asitenciaRepository.getAsistenciasByCarne(carne);
+		return asitenciaRepository.getAsistenciasByCarneOrderByFechaHoraDesc(carne);
 	}
 
 }

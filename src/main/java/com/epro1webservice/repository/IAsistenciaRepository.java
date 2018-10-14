@@ -11,7 +11,7 @@ import com.epro1webservice.entity.Asistencia;
 public interface IAsistenciaRepository extends JpaRepository<Asistencia, Long> {
 
 
-	public abstract List<Asistencia> getAsistenciasByCarne(String carne);
+	public abstract List<Asistencia> getAsistenciasByCarneOrderByFechaHoraDesc(String carne);
 	
 	
 }

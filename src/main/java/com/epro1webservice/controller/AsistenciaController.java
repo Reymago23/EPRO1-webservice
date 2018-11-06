@@ -31,7 +31,12 @@ public class AsistenciaController {
 	@PostMapping(produces= { MediaType.APPLICATION_JSON_VALUE })
 	public ResponseEntity<Asistencia> addAsistencia(@RequestBody Asistencia a) {
 		
-		Asistencia asistencia = new Asistencia(a.getCarne(), a.getAsignatura(),	a.getSeccion(), a.getAula(), new Timestamp(System.currentTimeMillis()));
+		Asistencia asistencia = new Asistencia(a.getCarne(), 
+								a.getAsignatura(),	
+								a.getSeccion(), 
+								a.getAula(), 
+								new Timestamp(System.currentTimeMillis()),
+								a.getCiclo());
 		
        return new ResponseEntity<Asistencia>(asistenciaService.addAsistencia(asistencia), HttpStatus.CREATED);
 	}

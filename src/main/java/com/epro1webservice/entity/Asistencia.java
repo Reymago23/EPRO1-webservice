@@ -42,18 +42,22 @@ public class Asistencia implements Serializable{
 	@Column(name="aula")
 	private String aula;
 	
+	@Column(name="ciclo")
+	private String ciclo;
+	
 	@Column(name="fecha_hora")
 	private Timestamp fechaHora;
 	
 	
 
 	
-	public Asistencia(String carne, String asignatura, String seccion, String aula, Timestamp fechaHora) {
+	public Asistencia(String carne, String asignatura, String seccion, String aula, Timestamp fechaHora, String ciclo) {
 		super();
 		this.carne = carne;
 		this.asignatura = asignatura;
 		this.seccion = seccion;
 		this.aula = aula;
+		this.ciclo = ciclo;
 		this.fechaHora = fechaHora;
 	}
 	
@@ -94,6 +98,15 @@ public class Asistencia implements Serializable{
 	public void setFechaHora(Timestamp fechaHora) {
 		this.fechaHora = fechaHora;
 	}
+
+	public String getCiclo() {
+		return ciclo;
+	}
+
+	public void setCiclo(String ciclo) {
+		this.ciclo = ciclo;
+	}
+	
 	
 	
 }

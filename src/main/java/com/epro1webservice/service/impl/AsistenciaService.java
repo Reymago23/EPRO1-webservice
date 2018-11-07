@@ -1,5 +1,6 @@
 package com.epro1webservice.service.impl;
 
+import java.sql.Timestamp;
 import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -34,6 +35,12 @@ public class AsistenciaService implements IAsistenciaService {
 	public List<Asistencia> getAsistenciasByCarne(String carne) {
 		
 		return asitenciaRepository.getAsistenciasByCarneOrderByFechaHoraDesc(carne);
+	}
+
+	@Override
+	public List<Asistencia> validateAsistencia(String carne, String asignatura) {
+		
+		return asitenciaRepository.getAsisteciaByCarneAndAsignaturaAndFechaHora(carne, asignatura);
 	}
 
 }

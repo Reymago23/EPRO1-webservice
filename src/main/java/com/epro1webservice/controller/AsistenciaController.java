@@ -75,4 +75,21 @@ public class AsistenciaController {
        return new ResponseEntity<List<Asistencia>>(asistencias, HttpStatus.CONFLICT);
 	}
 	
+	@GetMapping(value = "/{carne}/{asignatura}", produces= { MediaType.APPLICATION_JSON_VALUE })
+	public ResponseEntity<Integer> validateAsistencia(@PathVariable("carne") String carne,
+			@PathVariable("asignatura") String asignatura) {
+		
+        
+		Integer asistencias = 0;
+		List<Asistencia> list =	asistenciaService.validateAsistencia(carne, asignatura);
+		
+		if (!list.isEmpty()) {
+        	
+			asistencias = list.size();
+        }
+		
+        
+       return new ResponseEntity<Integer>(asistencias, HttpStatus.OK);
+	}
+	
 }
